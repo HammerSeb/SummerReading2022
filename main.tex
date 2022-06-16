@@ -1,0 +1,49 @@
+\documentclass[11pt, twoside]{article}	% Always compile at least twice.
+\usepackage[lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+
+% Cover Information
+\def\univname{Siwick Group}
+\def\coursenum{Summer Reading}
+\def\coursename{Group Theory - Application to the Physics of Condensed Matter}
+\def\professor{M. S. Dresselhaus, G. Dresselhaus and A. Jorio}
+\def\student{Note Taker}
+\def\semesteryear{Summer 2022}
+\def\imagename{siwick_logo_small}		    % Replace with University Seal
+\def\scalesize{0.50}					% Scale Logo Size 
+
+% Style Package (Load After Cover Information)
+\usepackage{style}	% Change to match style file
+
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+
+% Cover Page
+\coverpage
+
+% Last Updated
+\template
+
+% Table of Contents
+\thispagestyle{empty}
+\tableofcontents
+\newpage
+\pagestyle{fancy}
+\setcounter{section}{-1}
+\setcounter{page}{1}
+
+% Sections
+\input{sections/00_introduction}
+\input{sections/01_mat_background}
+\input{sections/9999_exmaples}
+
+% Bibliography
+%\newpage
+%\nocite{*}
+%\printbibliography[heading=bibintoc]
+
+
+\end{document}

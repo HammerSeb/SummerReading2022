@@ -1,0 +1,56 @@
+% !TEX root = ../main.tex
+\newpage
+\section{Template examples \label{sec:9999_ex}}
+Here you can see how to use the theorem environments. Find more of them in the style.sty file
+
+\subsection{Examples \label{sec:fermat}}
+
+Usually a chapter in mathematics does not start with a theorem but with a defintiion. For example
+
+\begin{dfn}[Continous functions] \label{dfn:continous}
+A function $f: D_f \rightarrow \R$ is called \textbf{continuous}  at $x_o \in D_f$ if \par
+\begin{equation*}
+    \forall \, \epsilon > 0 \quad  \exists \, \delta > 0 \quad  \forall \, x \in D_f : \ \abs{x-x_0} < \delta \  \Rightarrow  \ \abs{f(x) - f(x_0)} < \epsilon
+\end{equation*}
+\end{dfn}
+
+With the label tag you can referenence the defintion of a continous function \ref{dfn:continous} later on in the manuscript which is a nice feature. The following parts are from the original author of the template showing some more features.
+
+There are many famous theorems in Mathematics. One of the most famous theorems is Fermat's Last Theorem.
+
+\begin{thm}[Fermat's Last Theorem] \label{thm:fermat}
+If $n>2$, there are no integers $a,b,c$ with $abc \neq 0$ such that $a^n + b^n= c^n$.
+\end{thm}
+
+
+% Traditional Mathematics
+\subsection{More examples}
+
+Theorem~\ref{thm:fermat} is one of the most famous theorems in Mathematics. But most undergraduate students do not learn Fermat's Last Theorem. Instead, many students learn formulas such as:
+	\[
+	\oint_C \mathbf{F} \cdot d\mathbf{r} = \iint_S \nabla \times \mathbf{F} \cdot dS
+	\]
+But Mathematics starts far more simple than that. The first topic in Mathematics that one typically sees is Arithmetic. For instance, students typically will learn ``FOIL.'' 
+	\begin{equation} \label{eq:foil}
+	(x + y)^2= x^2 + 2xy + y^2
+	\end{equation}
+However, \eqref{eq:foil} tends to be a stumbling block for students. Many students will instead claim, incorrectly, that $(x+y)^2= x^2 + y^2$. The purpose of this course will be to prove Dirichlet's Unit Theorem, which states:
+
+\begin{restatable*}[Dirichlet's Unit Theorem]{thm}{unit} \label{thm:unit}
+Let $K$ be a number field of degree $n$ with $r$ real embeddings and $s$ conjugate pairs of complex embeddings. Then the abelian group $\O_K^\times$ is a finitely generated abelian group with rank $r+s-1$ and $\O_K^\times \cong \mu_K \times \Z^{r+s-1}$, where $\mu_K$ are the roots of unity in $\O_K$. 
+\end{restatable*}
+
+
+However, it will take some time to prove Theorem~\ref{thm:unit}.
+
+\subsection{Even more examples}
+Recall that the goal of this course was to prove Dirichlet's Unit Theorem:
+
+\unit	% Dirichlet's Unit Theorem
+
+\pf L.T.R. \qed
+
+
+\begin{ex}
+If $K=\Q$, then $r=1$ and $s=0$ so that $r+s-1=0$. Therefore, $\O_\Q^\times=\Z^\times=\{\pm1\}$. Of course, this is the most trivial possible example. \xqed
+\end{ex}

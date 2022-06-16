@@ -1,0 +1,37 @@
+% !TEX root = ../main.tex
+\newpage
+\section{Introduction \label{sec:00introduction}}
+This is the summary of the most important points we took away from the reading of "Group Theory - Application to the Phyzsics of Condensed Matter" by M. S. Dresselhaus, G. Dresselhaus and A. Jorio published by Springer in 2008. It is more of a "cheat sheet" we can refere back to than a complete summary. Hence, many examples from the book will be missing and only the main defintions, theorems and lemmas will be listed without much explanation. For the respective derivations and proofs we refer to the actual book. \par
+Each section corresponds to a chapter in the book with the same title. However, not all chapters from the book are summarized here. We start with the first for chapters on the mathematical foundations of group theory and will cherry pick the chapters along the way. 
+
+\subsection{Quantifiers \label{sec:00-1quantifiers}}
+For a concise notation of defintions and theorems it is helpful to use the quantifier notation. This enables a transformation from a more "prosaic" way of expressing logical statements to a very precise notation. There are two important quantifiers
+
+\begin{dfn}[All quantifier]\label{dfn:01_allquant}
+The all quantifier $\forall \dots$ states "for all $\dots$"
+\end{dfn}
+
+For example, $\forall \; z \in \C$ means "for all complex numbers z". To specify further properties or implications of the objects addressed by the quantifier either ":" or "," is used, e.g. $\forall \; x \in \R ^+: \sqrt{x} \in \R$ means "for all positive real numbers it holds true that the square root of that number is a real number".
+
+\begin{dfn}[Existence quantifier]\label{dfn:02_exquant}
+The \textbf{existence quantifier} $\exists \dots$ states "there exists (at least one) $\dots$". 
+A further limitation of the existence quantifier is the \textbf{uniquness quantifier} $\exists ! \dots$ stating there "exists only one $\dots$"
+\end{dfn}
+
+For example $\exists ! \; q \in \R: q^2=0$ says that there is only one real number whose square equals zero, which is of course 0. 
+
+The combination of the quantifiers enable a very concise statement of mathematical relations. Some examples:
+
+\begin{ex}[Quantifier Examples]
+\noindent Two lines through the origin have only one intersection:
+\begin{equation*}
+    \forall \; m_1, m_2 \in \R \; \exists! x_0 \in \R : m_1 x = m_2 x
+\end{equation*}
+\noindent The condition for a continuous function can be given by the "epsilon-delta-criterium": 
+\par A function $f: D_f \rightarrow \R$ is called \textbf{continuous}  at $x_o \in D_f$ if \par
+\begin{equation*}
+    \forall \, \epsilon > 0 \quad  \exists \, \delta > 0 \quad  \forall \, x \in D_f : \ \abs{x-x_0} < \delta \  \Rightarrow  \ \abs{f(x) - f(x_0)} < \epsilon
+\end{equation*}
+\noindent This reads as "\textit{For all $\epsilon$ greater than zero there exists a $\delta$ greater than zero so that for all elements from the domain of the function $f$ it holds true that if the distance between any value from the domain of the function and $x_0$ is less than $\delta$ the distance between the two image values is less than $\epsilon$.}" 
+\end{ex}
+
