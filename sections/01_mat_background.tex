@@ -1,3 +1,33 @@
 % !TEX root = ../main.tex
 \newpage
 \section{Basic Mathematical Background: Introduction}
+
+\begin{dfn}[Group]\label{dfn:11_group}
+Let $G \neq \emptyset $ be a nonempty set and $\circ: \; G \times G \rightarrow G$ a  binary operation. $(G, \circ)$ is a \textit{group} if the following conditions are full filled:
+\begin{enumerate}
+    \item neutral element: $\exists \, e\in G \; \; \forall \, g \in G: \; e \circ g = g \circ e = g$
+    \item inverse element: $\forall \, g \in G \; \; \exists \, g^{-1} \in G: \; g^{-1} \circ g = g \circ g^{-1} = e$
+    \item associative law: $\forall a,b,c \in G: \; \left(a \circ b \right) \circ c = a \circ \left(b \circ c \right)$
+\end{enumerate}
+
+\noindent G is \textit{Abelian} if elements commute: $\forall a,b \in G: \; a \circ b = v \circ a$
+\end{dfn}
+
+\begin{dfn}[Subgroup]\label{dfn:12_subgroup}
+Let $(G, \circ)$ be a group and $U$ a set with $U \subset G$. $(U, \circ)$ is a \textit{subgroup} of $(G, \circ)$ if
+\begin{enumerate}
+    \item $(U, \circ)$ is a group by definition \ref{dfn:11_group}
+    \item $(U, \circ)$ is closed: $\forall \, u,v \in U: u \circ v \in U$
+\end{enumerate}
+\end{dfn}
+
+Often the notation for a group $(G, \circ)$ is shortened to $G$ if the operation is clear from the context or does not need to be specified.
+
+\begin{dfn}[Order and periode]\label{dfn:13_order}
+Let $(G, \circ)$ be a group. 
+\begin{itemize}
+    \item \textit{order of the group} $G$: $\# G = \abs{G}$
+    \item \textit{order $n$ of the element} $g \in G$: $g^n = e$ \par in finite groups the order of each element is finite
+    \item \textit{period of the element} $g \in G$: $\langle g \rangle = \lbrace e, g, g^2, \dots, g^{n-1} \rbrace$ \par $\langle g \rangle$ is an abelian subgroup of $G$.
+\end{itemize}
+\end{dfn}
