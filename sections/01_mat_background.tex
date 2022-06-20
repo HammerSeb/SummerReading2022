@@ -74,7 +74,7 @@ Conjugacy is an equivalence relation:
 \end{enumerate}
 \end{thm}
 
-\begin{dfn}[Class]\label{dfn:15_class}
+\begin{dfn}[Class]\label{dfn:16_class}
 A \textit{class} is the totality of elements which can be obtained from a group element by conjugation.
 \end{dfn}
 
@@ -82,13 +82,13 @@ A \textit{class} is the totality of elements which can be obtained from a group 
 All elements of the same class have the same order. 
 \end{thm}
 
-\begin{dfn}[self-conjugate subgroup]\label{dfn:16_self-conj}
+\begin{dfn}[self-conjugate subgroup]\label{dfn:17_self-conj}
 Let $N \subseteq G$ be a subgroup of group $G$. \par
 $N$  is self-conjugate$\quad \Leftrightarrow \quad \forall \, x \in G: xNx^{-1} = N$ 
 \end{dfn}
 This means a subgroup is self-conjugate if it is invariant under conjugation with all elements of the group. A self-conjugate group is sometimes called \textit{invariant, normal or normal divisor} 
 
-\begin{dfn}[Simple group]\label{dfn:17_simple-gr}
+\begin{dfn}[Simple group]\label{dfn:18_simple-gr}
 A group with no self-conjugate subgroup is \textit{simple}.
 \end{dfn}
 
@@ -100,5 +100,26 @@ The right and left cosets of the self-conjugate subgroup $N \subseteq G$ are the
 If $N \subseteq G$ is a self-conjugate subgroup of $G$,the multiplication of two right cosets of $N$ (i.e. the multiplication of all elements of the cosets) yields another right coset of $N$. 
 \end{thm}
 
+\subsection{Factor groups}
+
+\begin{dfn}[Factor group]\label{dfn:19_factor-group}
+Let $N \subseteq (G, \bullet)$ be a self-conjugated subgroup of $G$. The set $F: \, \lbrace Nx | x \in G \rbrace$ contains all right cosets of $N$. We define a binary operation \par
+$\circ: \, F \times F \rightarrow F$ with
+\begin{align*}
+Nx \circ Ny 	&= \lbrace n_1 \bullet x, n_2 \bullet x, \dots, n_r \bullet x \rbrace \circ \lbrace n_1 \bullet y, n_2 \bullet y, \dots, n_r \bullet y \rbrace \\
+				&= \lbrace n_1 \bullet x \bullet n_1 \bullet y, n_1 \bullet x \bullet n_2 \bullet y, \dots, n_1 \bullet x \bullet n_r \bullet y, dots, n_r \bullet x \bullet n_r \bullet y \rbrace 
+				&= N(x \bullet y).
+\end{align*}
+$(F, \circ) = G/N$ is a group called \textit{Factor group}.
+\end{dfn}
+
+The neutral element of the factor group $G/N$ is the coset which contains the neutral element of $G$. The inverse element of $Nx \in G/N$ is $Nx^{-1}$. 
+
+\begin{dfn}[Index]\label{dfn:110_subgroup_index}
+The index of a subgroup $U \subseteq G$ is the total number of cosets which is the order of the group $G$ devided by the order of the subgroup $U$. \par 
+$idx U = \abs{\lbrace Ux | x \in G \rbrace} = \frac{\abs{G}}{\abs{U}}$ 
+\end{dfn}
+
+The order of a factor group $G/N$ is the index of the normal divisor $N$. 
 
 
