@@ -2,6 +2,8 @@
 \newpage
 \section{Basic Mathematical Background: Introduction}
 
+\subsection{Basic Definitions}
+
 \begin{dfn}[Group]\label{dfn:11_group}
 Let $G \neq \emptyset $ be a nonempty set and $\circ: \; G \times G \rightarrow G$ a  binary operation. $(G, \circ)$ is a \textit{group} if the following conditions are full filled:
 \begin{enumerate}
@@ -23,7 +25,7 @@ Let $(G, \circ)$ be a group and $U$ a set with $U \subset G$. $(U, \circ)$ is a 
 
 Often the notation for a group $(G, \circ)$ is shortened to $G$ if the operation is clear from the context or does not need to be specified.
 
-\begin{dfn}[Order and periode]\label{dfn:13_order}
+\begin{dfn}[Order and period]\label{dfn:13_order}
 Let $(G, \circ)$ be a group. 
 \begin{itemize}
     \item \textit{order of the group} $G$: $\# G = \abs{G}$
@@ -31,3 +33,69 @@ Let $(G, \circ)$ be a group.
     \item \textit{period of the element} $g \in G$: $\langle g \rangle = \lbrace e, g, g^2, \dots, g^{n-1} \rbrace$ \par $\langle g \rangle$ is an abelian subgroup of $G$.
 \end{itemize}
 \end{dfn}
+
+\begin{thm}[Rearrangement Theorem]\label{thm:11_rearrangement}
+Let $G = \lbrace e, g_1, g_2, \dots g_n \rbrace$ be a group. \par
+\noindent For any $g_i \in G: \; g_i \circ G = \lbrace g_i \circ e, g_i \circ g_1, \dots g_i \circ g_n \rbrace$ contains each element og $G$ once and only once.
+\end{thm}
+
+A consequence of the rearrangement theorem is that each coloumn of a multiplication table contains each element only once.
+
+\subsection{Cosets and Classes}
+
+\begin{dfn}[Coset]\label{dfn:14_coset}
+Let $G$ be a group and $U \subseteq G$ a subgroup of $G$. \par
+\noindent For $x \in G: \; Ux = \lbrace e\circ x, u_1\circ x, \dots u_r \circ x \rbrace$ is the \textit{right coset} of $U$
+\end{dfn}
+
+The same rational leads to the definition of the \textit{left coset} as $xU$. A coset is not necessarily a subgroup but if $x \in U$ then $Ux = U$ by the rearrangement theorem. 
+
+\begin{thm}[Distinct cosets]\label{thm:12_cosets-dist}
+Let $Ux, Uy$ be right cosets of a subgroup $U \subseteq G$. Then either $Ux \cap Uy = \emptyset$ or $Ux = Uy$. 
+\end{thm}
+
+\begin{thm}[Group order divisor]\label{thm:13_order-div}
+The order of a subgroup is a divisor of the group order. 
+\end{thm}
+
+\subsection{(Self-)Conjugacy}
+
+\begin{dfn}[Conjugate]\label{dfn:15_conjugate}
+Let $G$ be a group and $a,b \in G$. \par 
+\noindent $b$ \textit{conjugate} $a \quad \Leftrightarrow \quad \exists \, x \in G: \; b = xax^{-1}$ 
+\end{dfn}
+
+\begin{thm}\label{thm:14_conj-eqv}
+Conjugacy is an equivalence relation:
+\begin{enumerate}
+	\item Reflexivity: $a$ conj. $a$
+	\item Symmetric: $a$ conj. $b \quad \Rightarrow \quad b$ conj. $a$
+	\item Transitivity: $a$ conj. $b \wedge b$ conj. $c \quad \Rightarrow \quad a$ conj. $c$
+\end{enumerate}
+\end{thm}
+
+\begin{dfn}[Class]\label{dfn:15_class}
+A \textit{class} is the totality of elements which can be obtained from a group element by conjugation.
+\end{dfn}
+
+\begin{thm}[Class order]\label{thm:15_class-order}
+All elements of the same class have the same order. 
+\end{thm}
+
+\begin{dfn}[self-conjugate subgroup]\label{dfn:16_self-conj}
+Let $N \subseteq G$ be a subgroup of group $G$. \par
+$N$  is self-conjugate$\quad \Leftrightarrow \quad \forall \, x \in G: xNx^{-1} = N$ 
+\end{dfn}
+This means a subgroup is self-conjugate if it is invariant under conjugation with all elements of the group. A self-conjugate group is sometimes called \textit{invariant, normal or normal divisor} 
+
+\begin{dfn}[Simple group]\label{dfn:17_simple-gr}
+A group with no self-conjugate subgroup is \textit{simple}.
+\end{dfn}
+
+\begin{thm}\label{thm:16_lr-cosets}
+The right and left cosets of the self-conjugate subgroup $N \subseteq G$ are the same: $xN = Nx, \; x \in G$. 
+\end{thm}
+
+
+
+
