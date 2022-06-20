@@ -1,0 +1,46 @@
+% !TEX root = ../main.tex
+\newpage
+\section{Representation Theory and Basic Theorems}
+\subsection{Representations}
+
+\begin{dfn}[homomorphic/isomorphic groups]\label{dfn:21_homo-iso}
+Two groups $(G, \circ), (H, \times)$ are \textit{homomorphic} \par
+$\Leftrightarrow \exists \, \varphi: G \rightarrow H \; \forall \, a,b \in G: \; \varphi(a\circ b) = \varphi(a) \times \varphi(b)$ \par 
+\noindent  $(G, \circ), (H, \times)$ are \textit{isomorphic} $G \cong H$, if $G$ and $H$ are homomorphic and
+\begin{enumerate}
+	\item $\varphi(a) = \varphi(b) \Rightarrow a=b$ (injective)
+	\\item $\varphi(G) = H$ (surjective)
+\end{enumerate}
+\noindent, i.e. the hommomorphism $\varphi$ is bijective, hence creating a one-to-one correspondence. 
+\end{dfn}
+
+\begin{dfn}[Representation of a group]\label{dfn:22_repr-group}
+A \textit{representation of a group} $G$ is a substitution group (group of square matrices) which is homomorphic/isomorphic to G. \par
+$\forall \, g \in G: \; g \mapsto D(g)$ where $D(g)$ is the matrix representation of element $g$. 
+\end{dfn}
+
+\textbf{Attention:} A one-to-one correspondence is not \textit{not necessary}! For example, the unity matrix is a trivial representation of any group. 
+
+\begin{dfn}[Dimensionality of a representation]\label{dfn:23_dim-repr}
+The \textit{dimensionality of a representation} is equal to the dimensionality of its matrices. 
+\end{dfn}
+
+\begin{dfn}[(Ir)reducible representation]\label{dfn:23_irred-repr}
+\noindent \textit{reducible representation}: \par
+all matrices of the representation can be transformed to the same block form by one and the same equivalence representation. \par 
+\noindent \textit{irreducible representation}:
+not reducible, i.e. and irreducible representation cannot be expressed in terms of lower dimensionality. 
+\end{dfn}
+
+\begin{thm}[Unitary representations]\label{thm:21_unitary-repr}
+Every representation with matrices having non-vanishing determinents can be brought into unitary form by an equivalence transformation.
+\end{thm}
+
+\subsection{Wonderful Orthogonality Theorem}
+\begin{thm}[Wonderful orthogonality theorem]\label{thm:22_w-o-t}
+\begin{equation*}
+\sum_R D_{\mu\nu}^{\Gamma_j}(R)D_{\mu'\nu'}^{\Gamma_{j'}}(R^{-1}) = \frac{h}{l_j} \delta_{\Gamma_{j}\Gamma_{j'}}\delta_{\mu \mu'}\delta_{\nu\nu'}
+\end{equation*}
+
+is obeyed for all inequivalent, irreducible representations of a group, summing over all $h$ elements of the group. $l_j$ and $l_{j'}$ are the dimensionalities of the representations $\Gamma_{j}$ and $\Gamma_{j'}$, respectively.
+\end{thm}
