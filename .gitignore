@@ -1,5 +1,8 @@
-.log
-.xml
-.toc
+*.log
+*.xml
+*.toc
+*.aux
+*latexmk*
+*.fls
 main-blx.bib
 main.synctex.gz
